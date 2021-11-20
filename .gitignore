@@ -11,3 +11,6 @@
 
 # CLRS
 /CLRS-master
+
+# execs
+*.out
