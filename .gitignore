@@ -4,7 +4,10 @@
 /*csv
 
 # vscode
-.vscode
+/.vscode
 
 # exam questions
-exams
+/exams
+
+# CLRS
+/CLRS-master
