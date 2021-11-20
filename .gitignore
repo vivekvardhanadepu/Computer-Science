@@ -1,0 +1,10 @@
+# Documents
+/*.pdf
+/*.doc*
+/*csv
+
+# vscode
+.vscode
+
+# exam questions
+exams
