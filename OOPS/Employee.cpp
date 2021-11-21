@@ -56,6 +56,9 @@ class Employee: AbstractEmployee{
             }
         }
 
+        virtual void work(){
+            cout<<name<<" is checkig emails"<<endl;
+        }
         Employee(string name, string company, int age){
             this->name = name;
             this->company = company;
@@ -72,9 +75,12 @@ class Developer: public Employee{
         void fixBug(){
             cout<<this->name<<" fixed bug using "<<language<<endl;
         }
+        void work(){
+            cout<<name<<" writing code"<<endl;
+        }
 };
 
-class Teacher: Employee{
+class Teacher: public Employee{
     public:
         string sub;
         void prepLesson(){
@@ -82,6 +88,9 @@ class Teacher: Employee{
         }
         Teacher(string name, string company, int age, string sub):Employee(name, company, age){
             this->sub = sub;
+        }
+        void work(){
+            cout<<name<<" teaching lessons"<<endl;
         }
 };
 
@@ -97,10 +106,18 @@ int main(){
 
     Developer dev1 = Developer("salina", "Amazomn", 20, "cpp");
     // dev1.IntroduceYourself();
-    dev1.fixBug();
-    dev1.askForPromotion();
+    // dev1.fixBug();
+    // dev1.askForPromotion();
 
     Teacher t1 = Teacher("Jsack", "skl", 45, "coding");
-    t1.prepLesson();
+    // t1.prepLesson();
+    // dev1.work();
+    // t1.work();
+
+    Employee* e1 = &dev1;
+    Employee* e2 = &t1;
+    e1->work();
+    e2->work();
+    
     return 0; 
 }
