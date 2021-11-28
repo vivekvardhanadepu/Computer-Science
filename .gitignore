@@ -4,7 +4,7 @@
 /*csv
 
 # vscode
-/.vscode
+.vscode
 
 # exam questions
 /exams
@@ -14,3 +14,6 @@
 
 # execs
 *.out
+
+# interview-prep
+/interview-prep
